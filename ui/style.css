@@ -8,12 +8,24 @@ body {
     text-align: center;
 }
 
+.right {
+    text-align: right;
+}
+
 .text-big {
     font-size: 300%;
 }
 
+.text-small {
+    font-size: 50%;
+}
+
+.italic {
+    font-size: 300%;
+}
+
 .bold {
-    font-weight: bold;
+    font-style: italic;
 }
 
 .img-medium {
