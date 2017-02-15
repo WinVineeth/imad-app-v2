@@ -9,7 +9,8 @@ body {
 }
 
 .right {
-    text-align: right;
+    position: absolute;
+    right: 0;
 }
 
 .text-big {
@@ -20,11 +21,11 @@ body {
     font-size: 50%;
 }
 
-.italic {
-    font-size: 300%;
+.bold {
+    font-weight: bold;
 }
 
-.bold {
+.italic {
     font-style: italic;
 }
 
