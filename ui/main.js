@@ -23,11 +23,12 @@ tk.onclick=function(){
     if(req.readyState==4){
         if(request.status==200){
             document.getElementById('cou').innerHTML=request.responseText.toString();
+            document.getElementById('cou').innerHTML=counte.toString();
         }
     }  
   };
   req.open('GET','http://winvineeth.imad.hasura-app.io/counter',true);
   req.send(null);
   counte=counte+1;
-  document.getElementById('cou').innerHTML=counte.toString();
+  
 };
