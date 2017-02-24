@@ -21,9 +21,7 @@ tk.onclick=function(){
   req.onreadystatechange=function(){
     if(req.readyState==4){
         if(request.status==200){
-            var counter=request.responseText;
-            var th=document.getElementById('cou');
-            th.innerHTML="What nonsense!";
+            document.getElementById('cou').innerHTML=request.responseText.toString();
         }
     }  
   };
