@@ -23,15 +23,27 @@ tk.onclick=function(){
   //document.getElementById('cou').innerHTML=counte.toString();
 };
 
-var nam=document.getElementById('name');
-var namvalue=nam.value;
+
 var sub=document.getElementById('sub');
 sub.onclick=function(){
-    var names=['name1','name2','name3','name4'];
-    var list='';
-    for(var i=0;i<names.length;i++){
-        list+='<li>'+names[i]+'</li>';
-    }
-    var ul=document.getElementById('namlist');
-    ul.innerHTML=list;
+    var req=new XMLHttpRequest();
+    var nam=document.getElementById('name');
+    var namvalue=nam.value;
+    req.onreadystatechange=function(){
+    if(req.readyState===XMLHttpRequest.DONE){
+        if(request.status===200){
+            var names=request.responseText;
+            names=JSON.parse(names);
+            var list='';
+            for(var i=0;i<names.length;i++){
+                list+='<li>'+names[i]+'</li>';
+            }
+            var ul=document.getElementById('namlist');
+            ul.innerHTML=list;
+        }
+    }  
+  };
+  req.open('GET','http://winvineeth.imad.hasura-app.io/submit_nam?nam='+namvalue,true);
+  req.send(null);
+    
 };
