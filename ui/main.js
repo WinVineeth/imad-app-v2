@@ -12,7 +12,7 @@ tk.onclick=function(){
   var req=new XMLHttpRequest();
   req.onreadystatechange=function(){
     if(req.readyState===XMLHttpRequest.DONE){
-        if(request.status===200){
+        if(req.status===200){
             document.getElementById('cou').innerHTML=request.responseText.toString();
         }
     }  
