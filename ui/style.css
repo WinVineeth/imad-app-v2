@@ -14,11 +14,11 @@ body {
 }
 
 .text-big {
-    font-size: 300%;
+    font-size: 100%;
 }
 
 .text-small {
-    font-size: 100%;
+    font-size: 50%;
 }
 
 .bold {
