@@ -20,9 +20,10 @@ app.get('/article-two', function (req, res) {
 app.get('/article-three', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'a3.html'));
 });
-
+var counter=0;
 app.get('/counter', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'counter.html'));
+  counter=counter+1;
+  res.send(counter.toString());
 });
 
 app.get('/ui/style.css', function (req, res) {
