@@ -40,8 +40,8 @@ app.get('/ui/madi.png', function (req, res) {
 
 var names=[];
 
-app.get('/submit_nam/:nam', function (req, res) {
-  var nam=req.params.nam;
+app.get('/submit_nam', function (req, res) {
+  var nam=req.query.nam;
   names.push(nam);
   res.send(JSON.stringify(names));
 });
