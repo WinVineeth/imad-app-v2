@@ -1,6 +1,7 @@
 console.log('Loaded!');
 var im=document.getElementById('winvin');
 var marginLeft=0;
+var counte=0;
 function moveRight(){
     marginLeft=marginLeft+0.1;
     im.style.marginLeft=marginLeft+'px';
@@ -27,4 +28,6 @@ tk.onclick=function(){
   };
   req.open('GET','http://winvineeth.imad.hasura-app.io/counter',true);
   req.send(null);
+  counte=counte+1;
+  document.getElementById('cou').innerHTML=counte.toString();
 };
