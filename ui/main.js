@@ -19,7 +19,15 @@ im.oncontextmenu=function(){
 var t1=document.getElementById('count');
 t1.onclick=function(){
   var req=new XMLHttpRequest();
-  counter=counter+1;
-  var t2=document.getElementById('cou');
-  t2.innerHTML=counter.toString();
+  req.onreadystatechange=function(){
+    if(req.readyState===XMLHttpRequest.DONE){
+        if(request.status===200){
+            counter=request.responseText;
+            var t2=document.getElementById('cou');
+            t2.innerHTML=counter.toString();
+        }
+    }  
+  };
+  req.open('GET','http://winvineeth.imad.hasura-app.io/counter',true);
+  req.send(null);
 };
