@@ -19,8 +19,8 @@ var t1=document.getElementById('count');
 t1.onclick=function(){
   var req=new XMLHttpRequest();
   req.onreadystatechange=function(){
-    if(req.readyState===XMLHttpRequest.DONE){
-        if(request.status===200){
+    if(req.readyState==XMLHttpRequest.DONE){
+        if(request.status==200){
             var counter=request.responseText;
             var t2=document.getElementById('cou');
             t2.innerHTML=counter.toString();
