@@ -21,6 +21,10 @@ app.get('/article-three', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'a3.html'));
 });
 
+app.get('/counter', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'counter.html'));
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
