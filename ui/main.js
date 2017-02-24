@@ -1,5 +1,4 @@
 console.log('Loaded!');
-var counter=0;
 var im=document.getElementById('winvin');
 var marginLeft=0;
 function moveRight(){
@@ -22,7 +21,7 @@ t1.onclick=function(){
   req.onreadystatechange=function(){
     if(req.readyState===XMLHttpRequest.DONE){
         if(request.status===200){
-            counter=request.responseText;
+            var counter=request.responseText;
             var t2=document.getElementById('cou');
             t2.innerHTML=counter.toString();
         }
