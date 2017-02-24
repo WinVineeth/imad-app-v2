@@ -13,7 +13,7 @@ tk.onclick=function(){
   req.onreadystatechange=function(){
     if(req.readyState===XMLHttpRequest.DONE){
         if(req.status===200){
-            document.getElementById('cou').innerHTML=request.responseText.toString();
+            document.getElementById('cou').innerHTML=req.responseText.toString();
         }
     }  
   };
@@ -32,7 +32,7 @@ sub.onclick=function(){
     req.onreadystatechange=function(){
     if(req.readyState===XMLHttpRequest.DONE){
         if(req.status===200){
-            var names=request.responseText;
+            var names=req.responseText;
             names=JSON.parse(names);
             var list='';
             for(var i=0;i<names.length;i++){
