@@ -31,7 +31,7 @@ sub.onclick=function(){
     var namvalue=nam.value;
     req.onreadystatechange=function(){
     if(req.readyState===XMLHttpRequest.DONE){
-        if(request.status===200){
+        if(req.status===200){
             var names=request.responseText;
             names=JSON.parse(names);
             var list='';
