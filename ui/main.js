@@ -6,11 +6,19 @@ function moveRight(){
     marginLeft=marginLeft+0.1;
     im.style.marginLeft=marginLeft+'px';
 }
+function moveLeft(){
+    marginLeft=marginLeft-0.1;
+    im.style.marginLeft=marginLeft+'px';
+}
 im.onclick=function(){
     var interval=setInterval(moveRight,50);
 };
+im.oncontextmenu=function(){
+    var interval=setInterval(moveLeft,50);
+};
 var t1=document.getElementById('count');
 t1.onclick=function(){
+  var req=new XMLHttpRequest();
   counter=counter+1;
   var t2=document.getElementById('cou');
   t2.innerHTML=counter.toString();
