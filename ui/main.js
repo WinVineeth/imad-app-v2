@@ -19,8 +19,8 @@ var tk=document.getElementById('count');
 tk.onclick=function(){
   var req=new XMLHttpRequest();
   req.onreadystatechange=function(){
-    if(req.readyState==XMLHttpRequest.DONE){
-        if(request.status==200){
+    if(req.readyState===XMLHttpRequest.DONE){
+        if(request.status===200){
             var counter=request.responseText;
             var th=document.getElementById('cou');
             th.innerHTML="What nonsense!";
