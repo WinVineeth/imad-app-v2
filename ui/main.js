@@ -23,7 +23,7 @@ tk.onclick=function(){
         if(request.status==200){
             var counter=request.responseText;
             var th=document.getElementById('cou');
-            th.innerHTML="What nonsense!"
+            th.innerHTML="What nonsense!";
         }
     }  
   };
